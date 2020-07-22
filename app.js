@@ -106,3 +106,97 @@ headerTwo.classList.add('subtitle', 'header-two');
 headerTwo.classList.remove('header-two');
 console.log(headerTwo);
 
+headerTwo.addEventListener('click', function() {
+    headerTwo.textContent = 'Shayan';
+});
+
+//make another element
+const headerThree = document.createElement('h2');
+headerThree.textContent = 'Friends';
+
+container.appendChild(headerThree);
+
+console.log(headerThree);
+
+const list = document.createElement('ul');
+
+//iterate through my friends array
+for (let i = 0; i < friends.length; i++) {
+    let eachFriend = friends[i];
+    console.log(eachFriend);
+
+    const listItem = document.createElement('li');
+    listItem.textContent = eachFriend;
+
+    //console.log(listItem);
+
+    list.appendChild(listItem);
+}
+
+console.log(list);
+
+headerThree.addEventListener('click', function() {
+    container.appendChild(list);
+});
+
+//reference each friend
+//create an li
+//add textContent to that li
+//append that to a ul (unordered list)
+
+// //unordered list
+// friends
+// - friend 1
+// - friend 2
+// - friend 3
+
+// //ordered list
+// friends
+// 1. friend 1
+// 2. friend 2
+// 3. friend 3
+
+//Problem Solving
+
+//what do i start with
+//what do i end up with
+
+//understand the problem
+//where the issue starts and ...
+
+//break it down into more manageable problems
+
+
+//fizzBuzz
+//write a function that does the following:
+    // takes in an array
+    // check each number in the array
+    // if the number is divisible by 3 === FizzBuzz
+    // if the number is divisible by 3 === Fizz
+    // if the number is divisible by 5 === "Buzz"
+// return an array
+
+// For example:
+// [3, 5, 15, 20, 9, 7]
+// ['Fizz', 'Buzz', 'FizzBuzz', 'Buzz', 'Fizz', 7]
+
+// I need to set up an empty
+// iterate through the array that going to be passed in 
+// check the remainder of each element
+// push the result of each element inside the result array
+// result that result array
+
+function fizzBuzz(array) {
+    let result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        let num = array[i];
+        console.log(num);
+
+        if (num % 3 === 0 && num % 5 === 0)
+    }
+
+    return result;
+}
+
+fizzBuzz ([3, 5, 15, 20, 9, 7]);
